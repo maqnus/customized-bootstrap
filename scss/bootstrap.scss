@@ -1,0 +1,38 @@
+form {
+    background-color: $bg-color-7;
+    border: 1px solid $white;
+    border-radius: 8px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+
+    padding: $space-4;
+}
+
+.form-control {
+    border-color: $gray-4;
+}
+.form-control:focus {
+    border-color: $gray-5;
+    box-shadow: none;
+}
+.form-control,
+.form-control:focus,
+.form-control:not(textarea),
+label,
+.input-group-text {
+    color: $body-color;
+}
+
+.btn-primary {
+    background-color: $btn-hoved-bg-color;
+    border-color: $btn-hoved-bg-color;
+    color: $btn-hoved-color;
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    background-color: $btn-hoved-bg-hover-color;
+    border-color: $btn-hoved-bg-hover-color;
+    box-shadow: none;
+}

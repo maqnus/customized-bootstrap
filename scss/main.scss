@@ -1,0 +1,4 @@
+// Bootstrap
+@import "~scss/variables"; // Både Bootstrap-variabler.
+@import "~bootstrap/scss/bootstrap";
+@import "~scss/bootstrap"; // Globale tilpassinger av bootstrap utover det som tilpasses i variables.

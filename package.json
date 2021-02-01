@@ -10,11 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/maqnus/customized-bootstrap.git"
   },
+  "sass": "scss/main.scss",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/maqnus/customized-bootstrap/issues"
   },
-  "homepage": "https://github.com/maqnus/customized-bootstrap#readme"
+  "homepage": "https://github.com/maqnus/customized-bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
 }

@@ -1,0 +1,233 @@
+/**
+ * Globale variabler
+ *   Både Bootstrap-variabler og custom variabler.
+ *
+ *   Bootstrap-variabler er definert med !default, så de kan gis ny verdi
+ *   i denne filen. Denne filen blir importert før Bootstrap-rammeverket
+ *   slik at disse variabelverdiene fungerer som en konfigurasjon.
+ *   Oversikt over mulige Bootstrap-variabler som kan gis ny verdi, eller se:
+ *   https://github.com/twbs/bootstrap/blob/v4.1.3/scss/_variables.scss
+ *   (Se package.json for riktig versjonsnummer for Bootstrap.)
+ *   For å finne ut om en variabel i denne filen er en Bootstrap-variabel er
+ *   det bare å søke etter den i filen nevnt over.
+ */
+
+
+/**
+ * Fargerpalett
+ */
+
+// Gråtoner
+$white:  #ffffff;
+$gray-1: #fbfbfb;
+$gray-2: #f7f6f5;
+$gray-3: #f1efea;
+$gray-4: #cfd0cb;
+$gray-5: #767676;
+$black:	 #222222;
+
+// Rosafarger
+$pink-1: #fdf7f6;
+$pink-2: #faedec;
+$pink-3: #ffd9d6;
+
+// Lyse blåfarger
+$blue-light-1: #f5f8fb;
+$blue-light-2: #e9f3f9;
+$blue-light-3: #dbe6ec;
+$blue-light-4: #cbd9df;
+$blue-light-5: #bbc2c5;
+
+// Blågråfarger
+$blue-gray-1: #cbd9df;
+$blue-gray-2: #99abb4;
+$blue-gray-3: #556e7a;
+$blue-gray-4: #3c515e;
+
+// Blåfarger
+$blue-1: #65adc3;
+$blue-2: #057e9a;
+$blue-3: #386e84;
+$blue-4: #393c61;
+$blue-5: #2e3152;
+$blue-6: #181B40;
+
+// Grønt
+$green-1: #04ab79;
+
+// Gulfarger
+$yellow-1: #fffcce;
+$yellow-2: #f7b665;
+
+// Lakserosa
+$orange-1: #fd7065;
+
+// Rødfarger
+$red-1: #de5e56;
+$red-2: #c74e47;
+$red-3: #b10640;
+
+
+
+/**
+ * Fargealiaser
+ *
+ * Ingen grunn til å være alt for rigid i forhold til aliaser, eller "bruksvariabler"
+ * for farger, en kan også bruke "fargepalettvariabler" i koden. Hvis farger mot formodning
+ * skulle komme til å endre seg på sikt er det erfaringsmessig enklere å bruke, søk og
+ * erstatt enn det er å vedlikeholde "bruksvariabler" på tvers av hele applikasjonen.
+ */
+
+// Bootstrap-theme
+$primary:   $blue-4;
+$secondary: $gray-5;
+$success:   $green-1;
+$info:      $blue-1;
+$warning:   $yellow-2;
+$danger:    $red-2;
+$light:     $gray-1;
+$dark:      $black;
+
+// Bakgrunnsfarger for flater
+$bg-color-1:  $white;
+$bg-color-2:  $gray-1;
+$bg-color-3:  $gray-2;
+$bg-color-4:  $gray-3;
+$bg-color-5:  $pink-1;
+$bg-color-6:  $blue-light-1;
+$bg-color-7:  $blue-light-2;
+$bg-color-8:  $blue-light-3;
+$bg-color-9:  $blue-light-4;
+$bg-color-10: $blue-light-5;
+
+// Borders
+$border-color-1: $gray-3;
+$border-color-2: $orange-1;
+
+// Skjema
+$form-control-border-color: $gray-4;
+
+
+
+/**
+ * Typografi
+ *   Fonter, fontfarger, linjehøyde, mm.
+ */
+
+// Basis
+$body-color: $black;
+$font-family-sans-serif: 'Brandon Regular', Helvetica, Arial, sans-serif;
+$font-family-sans-serif-medium: 'Brandon Medium', Helvetica, Arial, sans-serif;
+$font-family-sans-serif-bold: 'Brandon Bold', Helvetica, Arial, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.4;
+
+// Typografisk hierarki.
+$font-size-ratio: 1.20;
+$font-size-1: ($font-size-base / $font-size-ratio);
+$font-size-2: $font-size-base;
+$font-size-3: ($font-size-base * $font-size-ratio);
+$font-size-4: ($font-size-3 * $font-size-ratio);
+$font-size-5: ($font-size-4 * $font-size-ratio);
+$font-size-6: ($font-size-5 * $font-size-ratio);
+$font-size-7: ($font-size-6 * $font-size-ratio);
+
+// Overskrifter
+$headings-font-family: "CrimsonText";
+$headings-font-weight: 400;
+$headings-line-height: 1;
+
+// Lenker
+$link-color: $blue-3;
+$link-hover-color: $red-3;
+
+// Knapper
+$btn-hoved-bg-color: $blue-2;
+$btn-hoved-bg-hover-color: $blue-3;
+$btn-hoved-color: $white;
+$btn-hoved-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+$btn-hoved-hover-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+
+/**
+ * Spacing
+ */
+$space: 1rem; // 16px i normalt konfigurerte nettlesere
+$space-0: 0;
+$space-1: $space * 0.25; // XXS =   4
+$space-2: $space * 0.5;  // XS  =   8
+$space-3: $space;        // S   =  16
+$space-4: $space * 1.5;  // M   =  24
+$space-5: $space * 2;    // L   =  32
+$space-6: $space * 2.5;  // XL  =  40
+$space-7: $space * 3.5;  // XXL =  56
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $space-1,
+    2: $space-2,
+    3: $space-3,
+    4: $space-4,
+    5: $space-5,
+    6: $space-6,
+    7: $space-7
+  ),
+  $spacers
+);
+
+
+
+/**
+ * Utvidet Bootstrap-grid
+ */
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1680px
+);
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1620px
+);
+
+
+
+// ----------------------------------------------------------------------------
+
+
+/**
+ * Bootstrap-reset
+ *
+ */
+
+$text-muted: $gray-5;
+$input-placeholder-color: $gray-5;
+
+// Bootstrap-farge-alert!
+$gray-100: red;
+$gray-200: red;
+$gray-300: red;
+$gray-400: red;
+$gray-500: red;
+$gray-600: red;
+$gray-700: red;
+$gray-800: red;
+$gray-900: red;
+$blue:     red;
+$indigo:   red;
+$purple:   red;
+$pink:     red;
+$red:      red;
+$orange:   red;
+$yellow:   red;
+$green:    red;
+$teal:     red;
+$cyan:     red;
+
